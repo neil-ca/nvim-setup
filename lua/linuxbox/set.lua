@@ -25,10 +25,15 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
-
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
-
+-- vim.cmd([[hi ColorColumn guibg=black]])
 vim.opt.clipboard = "unnamedplus"
 
+-- vim.opt.list = true
+-- vim.opt.listchars:append "eol:↴"
+
+-- require("indent_blankline").setup {
+--     show_end_of_line = true,
+-- }

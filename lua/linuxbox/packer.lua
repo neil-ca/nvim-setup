@@ -21,10 +21,12 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('terrortylor/nvim-comment')
     use('jose-elias-alvarez/null-ls.nvim')
-    use('jiangmiao/auto-pairs')
+    -- use('jiangmiao/auto-pairs')
+    use('windwp/nvim-autopairs')
     use('MunifTanjim/prettier.nvim')
     use('mfussenegger/nvim-jdtls')
     use('sainnhe/everforest')
+    use("lukas-reineke/indent-blankline.nvim")
     use { 'junegunn/fzf', run = "fzf#install()" }
     -- use {
     --     'nvim-lualine/lualine.nvim',

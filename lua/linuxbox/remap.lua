@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>-", ":wqa!")
 vim.keymap.set("n", "<leader>ñ", "<cmd>qa!<CR>")
@@ -19,7 +20,7 @@ vim.keymap.set("n", "<leader>5", "5gt")
 vim.keymap.set("n", "<leader>ff", ":Prettier")
 vim.keymap.set("n", "<leader>fg", ":lua vim.lsp.buf.format()")
 
-vim.keymap.set("n", "<leader>tt", ":split term://zsh")
+vim.keymap.set("n", "<leader>tt", "<cmd>split term://zsh<CR>")
 vim.keymap.set("t", "<leader>q", [[<C-\><C-n>]])
 
 vim.keymap.set("n", "<leader>r", "<cmd>!cargo run<CR>")
