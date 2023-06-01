@@ -16,6 +16,7 @@ lsp.set_preferences({
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+    vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
     vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
     vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
@@ -40,11 +41,6 @@ nvim_lsp.tsserver.setup {
     root_dir = nvim_lsp.util.root_pattern("package.json"),
     single_file_support = false
 }
-nvim_lsp.jdtls.setup {
-    on_attach = on_attach,
-    root_dir = nvim_lsp.util.root_pattern("gradlew", ".git", "mvnw"),
-}
-
 lsp.setup()
 
 local cmp = require('cmp')
@@ -61,7 +57,7 @@ cmp.setup({
         { name = 'path' },
     },
     mapping = {
-        ['<CR>'] = cmp.mapping.confirm({select = false}),
+        ['<CR>'] = cmp.mapping.confirm({select = true}),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-f>'] = cmp_action.luasnip_jump_forward(),
         ['<C-b>'] = cmp_action.luasnip_jump_backward(),

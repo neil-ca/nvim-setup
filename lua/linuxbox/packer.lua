@@ -24,7 +24,6 @@ return require('packer').startup(function(use)
     -- use('jiangmiao/auto-pairs')
     use('windwp/nvim-autopairs')
     use('MunifTanjim/prettier.nvim')
-    use('mfussenegger/nvim-jdtls')
     use('sainnhe/everforest')
     use("lukas-reineke/indent-blankline.nvim")
     use { 'junegunn/fzf', run = "fzf#install()" }
