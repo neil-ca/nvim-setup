@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
     use('MunifTanjim/prettier.nvim')
     use('sainnhe/everforest')
     use("lukas-reineke/indent-blankline.nvim")
+ 	use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
     use { 'junegunn/fzf', run = "fzf#install()" }
     -- use {
     --     'nvim-lualine/lualine.nvim',

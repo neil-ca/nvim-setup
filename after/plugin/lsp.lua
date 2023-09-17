@@ -55,6 +55,7 @@ cmp.setup({
         { name = 'luasnip' },
         -- { name = 'buffer' },
         { name = 'path' },
+        { name = 'cmp_tabnine' },
     },
     mapping = {
         ['<CR>'] = cmp.mapping.confirm({select = true}),
