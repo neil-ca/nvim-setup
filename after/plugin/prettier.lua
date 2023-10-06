@@ -15,5 +15,6 @@ prettier.setup({
     "typescript",
     "typescriptreact",
     "yaml",
+    "handlebars"
   },
 })

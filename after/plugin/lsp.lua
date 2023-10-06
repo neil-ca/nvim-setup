@@ -46,6 +46,7 @@ lsp.setup()
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 require('luasnip.loaders.from_vscode').lazy_load()
+require'luasnip'.filetype_extend("handlebars", {"html"})
 cmp.setup({
     -- completion = {
     --     autocomplete = false
@@ -55,7 +56,7 @@ cmp.setup({
         { name = 'luasnip' },
         -- { name = 'buffer' },
         { name = 'path' },
-        { name = 'cmp_tabnine' },
+        -- { name = 'cmp_tabnine' },
     },
     mapping = {
         ['<CR>'] = cmp.mapping.confirm({select = true}),
