@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use 'mfussenegger/nvim-jdtls'
+    use 'ellisonleao/gruvbox.nvim'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
@@ -26,7 +27,7 @@ return require('packer').startup(function(use)
     use('sainnhe/everforest')
     use("lukas-reineke/indent-blankline.nvim")
     -- use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
-    use { 'junegunn/fzf', run = "fzf#install()" }
+    -- use { 'junegunn/fzf', run = "fzf#install()" }
     -- use {
     --     'nvim-lualine/lualine.nvim',
     --     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
