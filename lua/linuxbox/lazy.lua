@@ -1,10 +1,4 @@
 require("lazy").setup({
-    {
-        'nvim-lualine/lualine.nvim',
-        config = function()
-            require('lualine').setup()
-        end
-    },
     'mfussenegger/nvim-jdtls',
     'ellisonleao/gruvbox.nvim',
     {
