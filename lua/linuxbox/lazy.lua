@@ -1,4 +1,5 @@
 require("lazy").setup({
+    'mfussenegger/nvim-dap',
     'mfussenegger/nvim-jdtls',
     'ellisonleao/gruvbox.nvim',
     {
