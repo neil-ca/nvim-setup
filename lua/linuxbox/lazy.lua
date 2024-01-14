@@ -1,5 +1,8 @@
 require("lazy").setup({
-    'mfussenegger/nvim-dap',
+    {'mfussenegger/nvim-dap', dependencies = 'rcarriga/nvim-dap-ui'},
+    'leoluz/nvim-dap-go',
+    'simrat39/rust-tools.nvim',
+    'nvim-telescope/telescope-dap.nvim',
     'mfussenegger/nvim-jdtls',
     'ellisonleao/gruvbox.nvim',
     {
@@ -46,6 +49,7 @@ require("lazy").setup({
         end,
     },
     'williamboman/mason-lspconfig.nvim',
+    'mason-org/mason-registry',
 
     -- Autocompletion
     'hrsh7th/nvim-cmp',
