@@ -1,6 +1,6 @@
 require('telescope').load_extension('dap')
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = "[S]earch [F]iles" })
+vim.keymap.set('n', '<leader>sf', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-u' }})<cr>", {noremap = true})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>sb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = "[S]earch [H]elp" })
