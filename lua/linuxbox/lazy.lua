@@ -1,6 +1,7 @@
 require("lazy").setup({
     {'mfussenegger/nvim-dap', dependencies = 'rcarriga/nvim-dap-ui'},
     'leoluz/nvim-dap-go',
+    'Shatur/neovim-ayu',
     'simrat39/rust-tools.nvim',
     'nvim-telescope/telescope-dap.nvim',
     'mfussenegger/nvim-jdtls',

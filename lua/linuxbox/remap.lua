@@ -24,6 +24,7 @@ vim.keymap.set("n", "<leader>tt", "<cmd>split term://zsh<CR>")
 vim.keymap.set("t", "<leader>q", [[<C-\><C-n>]])
 
 -- vim.keymap.set("n", "<leader>r", "<cmd>!cargo run<CR>")
+vim.keymap.set("n", "<leader>m", "<cmd>!make<CR>")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader><leader>", "/")
 
