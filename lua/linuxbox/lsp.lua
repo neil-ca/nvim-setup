@@ -32,6 +32,16 @@ require('mason-lspconfig').setup({
         lsp.default_setup,
     },
 })
+
+local nvim_lsp = require('lspconfig')
+nvim_lsp.html.setup {
+    on_attach = on_attach,
+    filetypes = {"php", "handlebars", "html"}
+}
+nvim_lsp.htmx.setup {
+    on_attach = on_attach,
+    filetypes = {"php", "handlebars", "html"}
+}
 lsp.setup()
 
 local cmp = require('cmp')
