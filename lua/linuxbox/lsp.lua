@@ -6,6 +6,7 @@ lsp.set_preferences({
 
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
+    vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -36,11 +37,11 @@ require('mason-lspconfig').setup({
 local nvim_lsp = require('lspconfig')
 nvim_lsp.html.setup {
     on_attach = on_attach,
-    filetypes = {"php", "handlebars", "html"}
+    filetypes = { "php", "handlebars", "html" }
 }
 nvim_lsp.htmx.setup {
     on_attach = on_attach,
-    filetypes = {"php", "handlebars", "html"}
+    filetypes = { "php", "handlebars", "html" }
 }
 lsp.setup()
 
