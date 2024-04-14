@@ -14,6 +14,17 @@ require("lazy").setup({
     },
     { 'rose-pine/neovim',                name = 'rose-pine' },
     "savq/melange-nvim",
+    {
+        'ribru17/bamboo.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require('bamboo').setup {
+                -- optional configuration here
+            }
+            require('bamboo').load()
+        end,
+    },
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     'theprimeagen/harpoon',
     -- 'mbbill/undotree'
@@ -27,10 +38,7 @@ require("lazy").setup({
     "lukas-reineke/indent-blankline.nvim",
     -- use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
     -- use { 'junegunn/fzf', run = "fzf#install()" }
-    -- use {
-    --     'nvim-lualine/lualine.nvim',
-    --     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    -- }
+    { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
     'projekt0n/github-nvim-theme',
     {
         "folke/zen-mode.nvim",

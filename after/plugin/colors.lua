@@ -51,7 +51,7 @@ require('rose-pine').setup(
     })
 
 function ColorMyPencils(color)
-    color = color or "ayu-dark"
+    color = color or "bamboo"
     --vim.g.everforest_background = 'hard'
     --vim.g.everforest_better_performance = 1
     -- vim.cmd.background = ''
