@@ -7,6 +7,7 @@ require("lazy").setup({
     'nvim-telescope/telescope-dap.nvim',
     'mfussenegger/nvim-jdtls',
     'ellisonleao/gruvbox.nvim',
+    'romainl/Apprentice',
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.5',
